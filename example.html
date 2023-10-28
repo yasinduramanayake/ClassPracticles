@@ -15,20 +15,118 @@
     <link rel="stylesheet" type="text/css" href="example.css" />
   </head>
   <body>
-    <br />
-    <br />
- 
-      <h1 class="header_color">Hello!</h1>
-    
-
-      <b class="header_color"> Bold Text</b>
-      <br />
-
-    
-      <br />
-     
- 
-
-    <!-- <img src="link" /> -->
+    <center>
+      <input id="input1" />
+      <input id="input2" />
+      <input id="input3" />
+      <button onclick="getData()">Submit</button>
+    </center>
   </body>
 </html>
+
+<script>
+  // creating a function
+  function getData() {
+    console.log(document.getElementById("input1").value);
+    console.log(document.getElementById("input1").value);
+  }
+  function getData() {
+    const x = document.getElementById("input1").value;
+    console.log(x);
+  }
+
+  // creating an object
+
+  const x = {
+    property1: "value1",
+    property2: "value2",
+    property3: "value3",
+  };
+  console.log(x.property3);
+
+  // operations
+
+  const y = 6;
+
+  const z = 7;
+  console.log(z / y);
+
+  // single array
+
+  const array1 = ["value", "value2", "value3", "value4"];
+
+  console.log(array1[3]);
+
+  // object array
+  const array2 = [
+    {
+      property1: "value1",
+      property2: "value2",
+      property3: "value3",
+    },
+    {
+      property4: "value4",
+      property5: "value5",
+      property6: "value6",
+    },
+  ];
+
+  console.log(array2[0].property1);
+
+  const array3 = [
+    {
+      property1: "valueabc",
+      property2: "valuecvf",
+      property3: "valuenmm",
+    },
+    {
+      property4: "valueopl",
+      property5: "valuelkm",
+      property6: "valuedfg",
+    },
+  ];
+  console.log(array3[1].property6);
+
+  // add elemants to an array(way 1)
+
+  const array6 = [];
+  array6[0] = "value1";
+
+  console.log(array6[0]);
+
+  // push data to array
+
+  const array7 = [];
+
+  array7.push("value");
+  array7.push("value1");
+  array7.push("value3");
+  console.log(array7);
+
+  // pop the elemant
+
+  array7.pop();
+
+  console.log(array7);
+
+  array7.pop();
+  console.log(array7);
+
+  array7.pop();
+
+  console.log(array7);
+
+  // variables
+
+  var g = 8;
+
+  console.log(this.g);
+
+  let p = 8;
+
+  console.log(this.p);
+
+  const w = 8;
+
+  console.log(this.w);
+</script>
