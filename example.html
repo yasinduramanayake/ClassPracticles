@@ -26,27 +26,37 @@
 </html>
 
 <script>
-  $(document).ready(function () {});
+  $(document).ready(async function () {
+    await timeOut();
+  }, console.log("hay"));
 
-  $(document).change(function () {
-    console.log("hay");
-  });
 
-  $("#button").click(function () {
-    console.log(console.log($("input1").val));
-  });
+  function timeOut() {
+    setTimeout(function () {
+      console.log("hay");
+    }, 2000);
+  }
 
-  $.ajax({
-    url: "https://reqres.in/api/user/1",
-    type: "",
-    data: {
-      name: "paul rudd",
-      movies: ["I Love You Man", "Role Models"],
-    },
-    success: function (response) {
-      console.log(response);
-    },
-  });
+  // $(document).change(function () {
+  //   console.log("hay");
+  // });
+
+  // $("#button").click(function () {
+  //   var x = $("#input1").val;
+  //   console
+  // });
+
+  // $.ajax({
+  //   url: "https://reqres.in/api/user/1",
+  //   type: "",
+  //   data: {
+  //     name: "paul rudd",
+  //     movies: ["I Love You Man", "Role Models"],
+  //   },
+  //   success: function (response) {
+  //     console.log(response);
+  //   },
+  // });
   // let myPromise = new Promise(function (myResolve, myReject) {
   //   // "Producing Code" (May take some time)
   //   const x = 8;
