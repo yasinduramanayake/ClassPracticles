@@ -1,18 +1,19 @@
 <template>
   <div>
-    <v-row>
-      <v-col class="d-flex child-flex" cols="4" md="4">
-        <v-img aspect-ratio="1" cover class="bg-grey-lighten-2" src="../assets/images/material.jpg"> </v-img>
-      </v-col>
+   <v-container>
+      <v-row>
+        <v-col cols="6" md="6">
+          <v-img src="../assets/images//material.jpg"  aspect-ratio="16/9" cover></v-img>
+        </v-col>
 
-      <v-col class="d-flex child-flex" cols="4" md="4">
-        <v-img aspect-ratio="1" cover class="bg-grey-lighten-2" src="../assets/images/material.jpg"> </v-img>
-      </v-col>
+        <v-col cols="6" md="6">
+          <v-img src="../assets/images//material.jpg"  aspect-ratio="16/9" cover></v-img>
+        </v-col>
 
-      <v-col class="d-flex child-flex" cols="4" md="4">
-        <v-img aspect-ratio="1" cover  src="../assets/images/material.jpg"> </v-img>
-      </v-col>
-    </v-row>
+       
+      </v-row>
+    </v-container>
+
   </div>
   <!-- <div class="pt-10"></div>
   <v-container> -->

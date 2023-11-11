@@ -10,6 +10,10 @@ import App from "./App.vue";
 import "bootstrap";
 import "bootstrap/dist/css/bootstrap.css";
 
+// styles
+
+
+
 // Composables
 import { createApp } from "vue";
 
