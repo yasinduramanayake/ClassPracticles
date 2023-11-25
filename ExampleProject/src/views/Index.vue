@@ -1,16 +1,19 @@
 <template>
   <div>
-    <FormComponent />
-
-    <br /><br /><br />
-
     <SliderComponent />
     <br />
     <br />
     <br />
+    <FormComponent :FormData="propData" />
 
+    <br />
+    <br />
+    <br />
     <DialogComponent />
-
+    <br />
+    <br />
+    <br />
+    <ListComponent />
     <br />
     <br />
     <br />
@@ -26,7 +29,7 @@
 <script>
 import FormComponent from "@/components/FormComponent.vue";
 import ConditionalExample from "@/components/ConditionalExample.vue";
-
+import ListComponent from "@/components/ListComponent.vue";
 import SliderComponent from "@/components/SliderComponent.vue";
 import DialogComponent from "@/components/DialogComponent.vue";
 export default {
@@ -36,6 +39,7 @@ export default {
     };
   },
   components: {
+    ListComponent,
     FormComponent,
     SliderComponent,
     DialogComponent,

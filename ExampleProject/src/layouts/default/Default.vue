@@ -1,9 +1,29 @@
 <template>
-  <router-view />
+  <v-app>
+    <HeaderComponent />
 
+    <br /><br />
+    <router-view />
+
+    <br /><br />
+    <br /><br />
+    <br /><br />
+    
+    <br /><br />
+    <br /><br />
+    <FooterComponent/>
+    
+  </v-app>
 </template>
 
-<script setup>
-import DefaultBar from "./AppBar.vue";
-import DefaultView from "./View.vue";
+<script>
+import HeaderComponent from "@/components/HeaderComponent.vue";
+import FooterComponent from "@/components/FooterComponent.vue";
+
+export default {
+  components: {
+    HeaderComponent,
+    FooterComponent,
+  },
+};
 </script>
