@@ -14,21 +14,20 @@
               <v-text-field
                 class="pt-2"
                 variant="outlined"
-                v-model="FormData.firstname"
+                v-model="form.firstname"
               ></v-text-field>
             </v-col>
             <v-col lg="6" cols="12" sm="6" md="6">
               <label class="header_color">Last Name</label>
               <v-text-field
                 class="pt-2"
-                v-model="FormData.lastname"
+                v-model="form.lastname"
                 variant="outlined"
               ></v-text-field>
             </v-col>
 
             <v-col lg="6" cols="12" sm="6" md="6">
-              <v-btn @click="getData()">{{  btn }}</v-btn>
-              
+              <v-btn @click="getData()">Submit</v-btn>
             </v-col>
           </v-row>
         </v-form>
@@ -38,23 +37,16 @@
 </template>
 <script>
 export default {
-  props: {
-    FormData: Object,
-  },
+
   data() {
     return {
       form: {},
       btn: "Sub",
     };
   },
-  computed: {
-    testData() {
-      return this.btn.split('').reverse().join('');
-    },
-  },
   methods: {
     getData() {
-      this.btn = "submit Btn";
+      this.$emit("formData", this.form);
     },
   },
 };

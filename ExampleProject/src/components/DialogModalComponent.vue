@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-card :title="title">
-      <FormComponent :FormData="FormData" />
+      <FormComponent  @formData="getData" />
 
       <br /><br
     /></v-card>
@@ -14,13 +14,16 @@ export default {
     FormComponent,
   },
   data() {
-    return {};
+    return {
+      form: {},
+    };
   },
-  props: {
-    title: String,
-    FormData: Object,
+  methods: {
+    getData(data) {
+      this.form = data;
+      console.log(this.form.firstname);
+      this.$emit("formData", this.form);
+    },
   },
-
-  methods: {},
 };
 </script>

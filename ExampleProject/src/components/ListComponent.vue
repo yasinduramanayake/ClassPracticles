@@ -21,9 +21,11 @@
     </center>
 
     <v-dialog width="1000" v-model="dialog">
-      <DialogModal :title="title" :FormData="form" />
+      <DialogModal @formData="getData" />
     </v-dialog>
   </div>
+
+  {{ emitingForm }}
 </template>
 <script>
 import DialogModal from "@/components/DialogModalComponent.vue";
@@ -37,6 +39,7 @@ export default {
       dialog: false,
       title: "",
       form: {},
+      emitingForm: {},
       items: [
         {
           title: "Item 1",
@@ -86,6 +89,10 @@ export default {
       const res = await axios.get("https://reqres.in/api/users");
       console.log(res);
     },
+  },
+  getData(data) {
+    this.emitingForm = data;
+    console.log("hello");
   },
 };
 </script>
